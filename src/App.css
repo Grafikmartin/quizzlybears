@@ -90,10 +90,6 @@
     font-size: 4rem;
   }
   
-  .hero-subtitle {
-    font-size: 2.2rem;
-  }
-  
   .hero-image {
     height: 45vh;
   }
@@ -102,20 +98,54 @@
     padding: 0 10vw 0 10vw;
   }
   
-  .benefits1-content {
+  .features-title {
+    font-size: 2.5rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+  }
+  
+  .benefits1-content,
+  .benefits2-content,
+  .benefits3-content,
+  .benefits4-content {
     padding: 0 10vw 0 10vw;
   }
   
-  .benefits2-content {
+  .benefits1-title,
+  .benefits2-title,
+  .benefits3-title,
+  .benefits4-title {
+    font-size: 2.5rem;
+  }
+  
+  .benefits1-layout,
+  .benefits2-layout,
+  .benefits3-layout,
+  .benefits4-layout {
+    gap: 3rem;
+  }
+  
+  .benefits1-image-container,
+  .benefits2-image-container,
+  .benefits3-image-container,
+  .benefits4-image-container {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .download-content {
     padding: 0 10vw 0 10vw;
   }
   
-  .benefits1-layout {
-    gap: 3rem;
+  .download-title {
+    font-size: 2.5rem;
   }
   
-  .benefits2-layout {
-    gap: 3rem;
+  .footer-content {
+    padding: 3rem 10vw 3rem 10vw;
   }
 }
 
@@ -145,11 +175,6 @@
     margin-bottom: 2rem;
   }
   
-  .hero-subtitle {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-  
   .hero-button {
     padding: 18px 36px;
     font-size: 1.3rem;
@@ -166,6 +191,8 @@
   
   .features-title {
     text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
   }
   
   .features-grid {
@@ -173,41 +200,119 @@
     gap: 2rem;
   }
   
-  .benefits-content {
+  .feature-item {
+    padding: 1.5rem;
+  }
+  
+  .feature-icon {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .material-icons {
+    font-size: 2.2rem;
+  }
+  
+  .feature-text {
+    font-size: 1.2rem;
+  }
+  
+  .benefits1-content,
+  .benefits2-content,
+  .benefits3-content,
+  .benefits4-content {
     padding: 0 5vw 0 5vw;
     text-align: center;
   }
   
-  .benefits-title {
+  .benefits1-title,
+  .benefits2-title,
+  .benefits3-title,
+  .benefits4-title {
     text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
   }
   
-  .benefits-layout {
+  .benefits1-layout,
+  .benefits2-layout,
+  .benefits3-layout,
+  .benefits4-layout {
     flex-direction: column;
     gap: 3rem;
   }
   
-  .benefits-left {
+  .benefits1-left,
+  .benefits2-left,
+  .benefits3-left,
+  .benefits4-left {
     max-width: 100%;
     order: 1;
   }
   
-  .benefits-right {
+  .benefits1-right,
+  .benefits2-right,
+  .benefits3-right,
+  .benefits4-right {
     max-width: 100%;
     text-align: center;
     order: 2;
   }
   
-  .benefits-image-container {
-    width: 250px;
-    height: 250px;
+  .benefits1-image-container,
+  .benefits2-image-container,
+  .benefits3-image-container,
+  .benefits4-image-container {
+    width: 300px;
+    height: 300px;
   }
   
-  .benefits-image {
-    width: 120%;
-    height: 120%;
-    top: 10%;
-    left: 5%;
+  .benefits1-subtitle,
+  .benefits2-subtitle,
+  .benefits3-subtitle,
+  .benefits4-subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .benefits1-text,
+  .benefits2-text,
+  .benefits3-text,
+  .benefits4-text {
+    font-size: 1.1rem;
+  }
+  
+  .download-content {
+    padding: 0 5vw 0 5vw;
+  }
+  
+  .download-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .download-buttons {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .download-button {
+    height: 70px;
+  }
+  
+  .footer-content {
+    padding: 3rem 5vw 3rem 5vw;
+  }
+  
+  .footer-logo {
+    height: 70px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-copyright {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -218,10 +323,6 @@
   
   .hero-title {
     font-size: 3rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.8rem;
   }
   
   .hero-button {
@@ -235,6 +336,11 @@
   
   .features-content {
     padding: 0 3vw 0 3vw;
+  }
+  
+  .features-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
   
   .features-grid {
@@ -260,89 +366,74 @@
     font-size: 1rem;
   }
   
-  .benefits-content {
+  .benefits1-content,
+  .benefits2-content,
+  .benefits3-content,
+  .benefits4-content {
     padding: 0 3vw 0 3vw;
   }
   
-  .benefits-title {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+  .benefits1-title,
+  .benefits2-title,
+  .benefits3-title,
+  .benefits4-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
   
-  .benefits-subtitle {
+  .benefits1-subtitle,
+  .benefits2-subtitle,
+  .benefits3-subtitle,
+  .benefits4-subtitle {
     font-size: 1.6rem;
     margin-bottom: 1rem;
   }
   
-  .benefits-text {
-    font-size: 1.1rem;
+  .benefits1-text,
+  .benefits2-text,
+  .benefits3-text,
+  .benefits4-text {
+    font-size: 1rem;
   }
   
-  .benefits-image-container {
-    width: 200px;
-    height: 200px;
+  .benefits1-image-container,
+  .benefits2-image-container,
+  .benefits3-image-container,
+  .benefits4-image-container {
+    width: 250px;
+    height: 250px;
   }
   
-  .benefits1-content {
-    padding: 0 5vw 0 5vw;
-    text-align: center;
+  .download-content {
+    padding: 0 3vw 0 3vw;
   }
   
-  .benefits1-title {
-    text-align: center;
+  .download-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
   
-  .benefits1-layout {
-    flex-direction: column;
-    gap: 3rem;
+  .download-button {
+    height: 60px;
   }
   
-  .benefits1-left {
-    max-width: 100%;
-    order: 1;
+  .footer-content {
+    padding: 2rem 3vw 2rem 3vw;
   }
   
-  .benefits1-right {
-    max-width: 100%;
-    text-align: center;
-    order: 2;
+  .footer-logo {
+    height: 60px;
+    margin-bottom: 1rem;
   }
   
-  .benefits1-image-container {
-    width: 300px;
-    height: 300px;
+  .footer-copyright {
+    font-size: 1rem;
+    margin-bottom: 1rem;
   }
   
-  .benefits1-image {
-    width: 120%;
-    height: 120%;
-    top: 10%;
-    left: 5%;
-  }
-  
-  .benefits2-content {
-    padding: 0 5vw 0 5vw;
-    text-align: center;
-  }
-  
-  .benefits2-layout {
-    flex-direction: column;
-    gap: 3rem;
-  }
-  
-  .benefits2-left {
-    max-width: 100%;
-    order: 1;
-  }
-  
-  .benefits2-right {
-    max-width: 100%;
-    order: 2;
-  }
-  
-  .benefits2-image-container {
-    width: 300px;
-    height: 300px;
+  .footer-github-icon {
+    width: 35px;
+    height: 35px;
   }
 }
 
@@ -805,72 +896,4 @@
   width: 40px;
   height: 40px;
   object-fit: contain;
-}
-
-/* Responsive Design for Download and Footer */
-@media (max-width: 768px) {
-  .download-content {
-    padding: 0 5vw 0 5vw;
-  }
-  
-  .download-title {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-  }
-  
-  .download-buttons {
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .download-button {
-    height: 70px;
-  }
-  
-  .footer-content {
-    padding: 3rem 5vw 3rem 5vw;
-  }
-  
-  .footer-logo {
-    height: 70px;
-    margin-bottom: 1.5rem;
-  }
-  
-  .footer-copyright {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .download-content {
-    padding: 0 3vw 0 3vw;
-  }
-  
-  .download-title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .download-button {
-    height: 60px;
-  }
-  
-  .footer-content {
-    padding: 2rem 3vw 2rem 3vw;
-  }
-  
-  .footer-logo {
-    height: 60px;
-    margin-bottom: 1rem;
-  }
-  
-  .footer-copyright {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .footer-github .material-icons {
-    font-size: 2rem;
-  }
 }

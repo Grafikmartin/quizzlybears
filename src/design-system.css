@@ -120,13 +120,14 @@ body {
 /* Header Styles */
 .header {
   background-color: var(--bg-gray);
-  padding: 1rem 2rem;
+  padding: 1rem 0;
   border-bottom: 2px solid var(--bg-black);
 }
 
 .header-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 0 10vw 0 10vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
