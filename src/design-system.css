@@ -1,0 +1,208 @@
+/* Design System - Quizzly Bears */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+:root {
+  /* Hintergrundfarben */
+  --bg-gray: #F3F4F1;
+  --bg-black: #212121;
+  --bg-limo: #cdf546;
+  --bg-green: #144419;
+  --bg-disable: #cdd0cd;
+  --system-red: #D44013;
+  --system-orange: #e7913e;
+}
+
+/* Utility-Klassen für Hintergründe */
+.bg-gray {
+  background-color: var(--bg-gray);
+}
+
+.bg-black {
+  background-color: var(--bg-black);
+}
+
+.bg-limo {
+  background-color: var(--bg-limo);
+}
+
+.bg-green {
+  background-color: var(--bg-green);
+}
+
+.bg-disable {
+  background-color: var(--bg-disable);
+}
+
+.bg-system-red {
+  background-color: var(--system-red);
+}
+
+.bg-system-orange {
+  background-color: var(--system-orange);
+}
+
+/* Utility-Klassen für Textfarben */
+.text-gray {
+  color: var(--bg-gray);
+}
+
+.text-black {
+  color: var(--bg-black);
+}
+
+.text-limo {
+  color: var(--bg-limo);
+}
+
+.text-green {
+  color: var(--bg-green);
+}
+
+.text-disable {
+  color: var(--bg-disable);
+}
+
+.text-system-red {
+  color: var(--system-red);
+}
+
+.text-system-orange {
+  color: var(--system-orange);
+}
+
+/* Utility-Klassen für Rahmen */
+.border-gray {
+  border-color: var(--bg-gray);
+}
+
+.border-black {
+  border-color: var(--bg-black);
+}
+
+.border-limo {
+  border-color: var(--bg-limo);
+}
+
+.border-green {
+  border-color: var(--bg-green);
+}
+
+.border-disable {
+  border-color: var(--bg-disable);
+}
+
+.border-system-red {
+  border-color: var(--system-red);
+}
+
+.border-system-orange {
+  border-color: var(--system-orange);
+}
+
+/* Standard-Hintergrund für die gesamte App */
+body {
+  background-color: var(--bg-gray);
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  background-color: var(--bg-gray);
+  min-height: 100vh;
+}
+
+/* Header Styles */
+.header {
+  background-color: var(--bg-gray);
+  padding: 1rem 2rem;
+  border-bottom: 2px solid var(--bg-black);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-bear {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  align-self: flex-end;
+  margin-bottom: 4px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: var(--bg-black);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--bg-green);
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+  
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    gap: 1.5rem;
+  }
+  
+  .logo-bear {
+    height: 40px;
+  }
+  
+  .logo-text {
+    height: 26px;
+    margin-bottom: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 1rem;
+  }
+  
+  .nav-links li a {
+    font-size: 1rem;
+  }
+} 
