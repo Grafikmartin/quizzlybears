@@ -637,8 +637,10 @@
 
 /* Benefits4 Section */
 .benefits4-section {
-  padding: 6rem 0;
+  padding: 6rem 0 20rem 0;
   background-color: var(--bg-gray);
+  position: relative;
+  z-index: 1;
 }
 
 .benefits4-content {
@@ -719,6 +721,9 @@
 .download-section {
   padding: 6rem 0;
   background-color: #cdf546;
+  position: relative;
+  z-index: 2;
+  margin-top: 10rem;
 }
 
 .download-content {
