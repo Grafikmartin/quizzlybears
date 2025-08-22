@@ -213,6 +213,50 @@ function App() {
           </div>
         </div>
       </main>
+
+      {/* Download Section */}
+      <section className="download-section">
+        <div className="download-content">
+          <h2 className="download-title">Download app Quizzly Bears</h2>
+          <div className="download-buttons">
+            <img 
+              src="/assets/images/apple-store.webp" 
+              alt="Download on Apple App Store" 
+              className="download-button"
+            />
+            <img 
+              src="/assets/images/google-play.webp" 
+              alt="Download on Google Play Store" 
+              className="download-button"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="footer">
+        <div className="footer-line"></div>
+        <div className="footer-content">
+          <img 
+            src="/assets/images/Logo-Bear-black.webp" 
+            alt="Quizzly Bears Logo" 
+            className="footer-logo"
+          />
+          <p className="footer-copyright">© 2025 Quizzly Bears. All rights reserved</p>
+          <a 
+            href="https://github.com/nimitaya/quizzly-bears" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="footer-github"
+          >
+            <img 
+              src="/assets/images/github.webp" 
+              alt="GitHub Repository" 
+              className="footer-github-icon"
+            />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }

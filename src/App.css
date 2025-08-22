@@ -714,3 +714,158 @@
   margin: 0;
   display: block;
 }
+
+/* Download Section */
+.download-section {
+  padding: 6rem 0;
+  background-color: #cdf546;
+}
+
+.download-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 10vw 0 10vw;
+  text-align: center;
+}
+
+.download-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #212121;
+  margin: 0 0 4rem 0;
+}
+
+.download-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.download-button {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.download-button:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background-color: #cdf546;
+  padding: 0;
+}
+
+.footer-line {
+  height: 2px;
+  background-color: #212121;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 10vw 4rem 10vw;
+  text-align: center;
+}
+
+.footer-logo {
+  height: 80px;
+  width: auto;
+  margin-bottom: 2rem;
+}
+
+.footer-copyright {
+  font-size: 1.2rem;
+  color: #212121;
+  margin: 0 0 2rem 0;
+  font-weight: 500;
+}
+
+.footer-github {
+  display: inline-block;
+  color: #212121;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.footer-github:hover {
+  transform: scale(1.1);
+}
+
+.footer-github-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Responsive Design for Download and Footer */
+@media (max-width: 768px) {
+  .download-content {
+    padding: 0 5vw 0 5vw;
+  }
+  
+  .download-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .download-buttons {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .download-button {
+    height: 70px;
+  }
+  
+  .footer-content {
+    padding: 3rem 5vw 3rem 5vw;
+  }
+  
+  .footer-logo {
+    height: 70px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-copyright {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .download-content {
+    padding: 0 3vw 0 3vw;
+  }
+  
+  .download-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .download-button {
+    height: 60px;
+  }
+  
+  .footer-content {
+    padding: 2rem 3vw 2rem 3vw;
+  }
+  
+  .footer-logo {
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-copyright {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-github .material-icons {
+    font-size: 2rem;
+  }
+}
