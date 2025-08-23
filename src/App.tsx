@@ -1,8 +1,41 @@
-import React from 'react';
+
+
+import React, { useEffect, useRef } from 'react';
 import './design-system.css';
 import './App.css';
 
 function App() {
+  // Intersection Observer für Feature-Items
+  const featuresRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const featureItems = featuresRef.current?.querySelectorAll('.feature-item');
+    if (!featureItems) return;
+
+    // Initial: alle Feature-Items unsichtbar machen
+    featureItems.forEach((item) => item.classList.remove('feature-item--visible'));
+
+    const observer = new window.IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('feature-item--visible');
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+  rootMargin: '0px 0px -20% 0px', // 20% von unten
+      }
+    );
+
+    featureItems.forEach((item) => observer.observe(item));
+
+    return () => {
+      featureItems.forEach((item) => observer.unobserve(item));
+    };
+  }, []);
+
   return (
     <div className="App bg-gray">
       {/* Header */}
@@ -56,8 +89,8 @@ function App() {
           </div>
         </div>
 
-        {/* Features Section */}
-        <div className="features-section">
+  {/* Features Section */}
+  <div className="features-section" id="features" ref={featuresRef}>
           <div className="features-content">
             <h2 className="features-title">Features Quizzly Bears</h2>
             
@@ -107,8 +140,8 @@ function App() {
           </div>
         </div>
 
-        {/* Benefits1 Section */}
-        <div className="benefits1-section">
+  {/* Benefits1 Section */}
+  <div className="benefits1-section" id="benefits">
           <div className="benefits1-content">
             <h2 className="benefits1-title">Benefits Quizzly Bears</h2>
             
@@ -214,8 +247,8 @@ function App() {
         </div>
       </main>
 
-      {/* Download Section */}
-      <section className="download-section">
+  {/* Download Section */}
+  <section className="download-section" id="download">
         <div className="download-content">
           <h2 className="download-title">Download app Quizzly Bears</h2>
           <div className="download-buttons">
@@ -245,8 +278,8 @@ function App() {
           <p className="footer-copyright">© 2025 Quizzly Bears. All rights reserved</p>
           <a 
             href="https://github.com/nimitaya/quizzly-bears" 
-            target="_blank" 
-            rel="noopener noreferrer"
+          target="_blank"
+          rel="noopener noreferrer"
             className="footer-github"
           >
             <img 
