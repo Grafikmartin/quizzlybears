@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/quizzlybears/static/css/main.ee869091.css",
+    "main.css": "/quizzlybears/static/css/main.99117bf0.css",
     "main.js": "/quizzlybears/static/js/main.8d4875eb.js",
     "static/js/453.8a086065.chunk.js": "/quizzlybears/static/js/453.8a086065.chunk.js",
     "index.html": "/quizzlybears/index.html",
-    "main.ee869091.css.map": "/quizzlybears/static/css/main.ee869091.css.map",
+    "main.99117bf0.css.map": "/quizzlybears/static/css/main.99117bf0.css.map",
     "main.8d4875eb.js.map": "/quizzlybears/static/js/main.8d4875eb.js.map",
     "453.8a086065.chunk.js.map": "/quizzlybears/static/js/453.8a086065.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee869091.css",
+    "static/css/main.99117bf0.css",
     "static/js/main.8d4875eb.js"
   ]
 }
