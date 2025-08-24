@@ -877,7 +877,7 @@ html, body {
   height: 120%;
   object-fit: contain;
   position: absolute;
-  top: 10%;
+  top: -5%;
   left: 0%;
   z-index: 2;
   transform: translateX(-500px) translateY(80px) scale(0.7);
@@ -951,7 +951,7 @@ html, body {
   height: 120%;
   object-fit: contain;
   position: absolute;
-  top: 10%;
+  top: -5%;
   left: 0%;
   z-index: 2;
 }
@@ -961,7 +961,7 @@ html, body {
   height: 180%;
   object-fit: contain;
   position: absolute;
-  top: 10%;
+  top: -10%;
   left: -50%;
   z-index: 2;
   transform: translateX(500px) translateY(80px) scale(0.7);
@@ -1183,15 +1183,21 @@ html, body {
   }
 }
 
-/* Sehr breite Bildschirme - Extra Anpassung für Benefits3 */
+/* Sehr breite Bildschirme - Extra Anpassung für Benefits3 und Benefits4 */
 @media (min-width: 1400px) {
   .benefits3-image-profil {
+    top: -15%;
+  }
+  .benefits4-image-stats {
     top: -15%;
   }
 }
 
 @media (min-width: 1800px) {
   .benefits3-image-profil {
+    top: -20%;
+  }
+  .benefits4-image-stats {
     top: -20%;
   }
 }
