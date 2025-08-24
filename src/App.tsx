@@ -5,143 +5,131 @@ import './design-system.css';
 import './App.css';
 
 function App() {
-  // Intersection Observer für Feature-Items
   const featuresRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const featureItems = featuresRef.current?.querySelectorAll('.feature-item');
-    if (!featureItems) return;
-
-    // Initial: alle Feature-Items unsichtbar machen
-    featureItems.forEach((item) => item.classList.remove('feature-item--visible'));
-
-    const observer = new window.IntersectionObserver(
+    const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('feature-item--visible');
+            // Feature wird sichtbar mit Verzögerung basierend auf der Position
+            const featureItems = featuresRef.current?.querySelectorAll('.feature-item');
+            if (featureItems) {
+              const index = Array.from(featureItems).indexOf(entry.target as Element);
+              setTimeout(() => {
+                entry.target.classList.add('visible');
+              }, index * 150); // 150ms Verzögerung zwischen jedem Feature
+            }
+          } else {
+            // Feature wird unsichtbar
+            entry.target.classList.remove('visible');
           }
         });
       },
       {
-        threshold: 0.2,
-  rootMargin: '0px 0px -20% 0px', // 20% von unten
+        threshold: 0.2, // Trigger when 20% of the element is visible
+        rootMargin: '0px 0px -20% 0px' // Trigger 20% from bottom
       }
     );
 
-    featureItems.forEach((item) => observer.observe(item));
+    // Jedes Feature-Item einzeln beobachten
+    const featureItems = featuresRef.current?.querySelectorAll('.feature-item');
+    if (featureItems) {
+      featureItems.forEach((item) => {
+        observer.observe(item);
+      });
+    }
 
-    return () => {
-      featureItems.forEach((item) => observer.unobserve(item));
-    };
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <div className="App bg-gray">
+    <div className="App">
       {/* Header */}
       <header className="header">
         <div className="header-container">
           <div className="logo-section">
-            <img 
-              src="/assets/images/Logo-Bear-green-black.webp" 
-              alt="Quizzly Bears Logo" 
-              className="logo-bear"
-            />
-            <img 
-              src="/assets/images/Logo-Text.webp" 
-              alt="Quizzly Bears Text" 
-              className="logo-text"
-            />
+            <img src="/assets/images/Logo-Bear-green-black.webp" alt="Quizzly Bears Logo" className="logo-bear" />
+            <img src="/assets/images/Logo-Text.webp" alt="Quizzly Bears Text" className="logo-text" />
           </div>
-          
-          <nav>
-            <ul className="nav-links">
-              <li><a href="#features">Features</a></li>
-              <li><a href="#benefits">Benefits</a></li>
-              <li><a href="#download">Download</a></li>
-            </ul>
+          <nav className="nav-links">
+            <a href="#features">Features</a>
+            <a href="#benefits">Benefits</a>
+            <a href="#download">Download</a>
           </nav>
         </div>
       </header>
+      <div className="header-line"></div>
 
       {/* Main Content */}
       <main className="main-content">
-        <div className="hero-section">
+        {/* Hero Section */}
+        <section className="hero-section">
           <div className="hero-content">
             <div className="hero-left">
               <h1 className="hero-title">
-                Quizzly&nbsp;Bears&nbsp;–
-                <br />
+                Quizzly&nbsp;Bears&nbsp;–<br />
                 the quiz app with AI
               </h1>
-              <button className="hero-button bg-green text-gray">
-                Download
-              </button>
+              <button className="hero-button">Download</button>
             </div>
-            
             <div className="hero-right">
               <img 
                 src="/assets/images/play-start-solo.webp" 
                 alt="Play Start Solo" 
-                className="hero-image"
+                className="hero-image" 
               />
             </div>
           </div>
-        </div>
+        </section>
 
-  {/* Features Section */}
-  <div className="features-section" id="features" ref={featuresRef}>
+        {/* Features Section */}
+        <section id="features" className="features-section" ref={featuresRef}>
           <div className="features-content">
             <h2 className="features-title">Features Quizzly Bears</h2>
-            
             <div className="features-grid">
               <div className="feature-item">
                 <div className="feature-icon">
                   <span className="material-icons">search</span>
                 </div>
-                <h3 className="feature-text">Find any topic for a quiz</h3>
+                <p className="feature-text">Find any topic for a quiz</p>
               </div>
-              
               <div className="feature-item">
                 <div className="feature-icon">
                   <span className="material-icons">tune</span>
                 </div>
-                <h3 className="feature-text">Customize the difficulty to your liking</h3>
+                <p className="feature-text">Customize the difficulty to your liking</p>
               </div>
-              
               <div className="feature-item">
                 <div className="feature-icon">
                   <span className="material-icons">edit</span>
                 </div>
-                <h3 className="feature-text">Create your own quiz</h3>
+                <p className="feature-text">Create your own quiz</p>
               </div>
-              
               <div className="feature-item">
                 <div className="feature-icon">
                   <span className="material-icons">favorite</span>
                 </div>
-                <h3 className="feature-text">Pick your favorite topics</h3>
+                <p className="feature-text">Pick your favorite topics</p>
               </div>
-              
               <div className="feature-item">
                 <div className="feature-icon">
                   <span className="material-icons">emoji_events</span>
                 </div>
-                <h3 className="feature-text">Win and get medals</h3>
+                <p className="feature-text">Win and get medals</p>
               </div>
-              
               <div className="feature-item">
                 <div className="feature-icon">
                   <span className="material-icons">share</span>
                 </div>
-                <h3 className="feature-text">Make friends and play together</h3>
+                <p className="feature-text">Make friends and play together</p>
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-  {/* Benefits1 Section */}
-  <div className="benefits1-section" id="benefits">
+        {/* Benefits1 Section */}
+        <div className="benefits1-section" id="benefits">
           <div className="benefits1-content">
             <h2 className="benefits1-title">Benefits Quizzly Bears</h2>
             
