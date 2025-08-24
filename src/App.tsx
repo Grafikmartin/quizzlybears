@@ -417,6 +417,12 @@ function App() {
           />
           <p className="footer-copyright">© 2025 Quizzly Bears. All rights reserved</p>
           <a 
+            href="#developers" 
+            className="footer-developers"
+          >
+            Developers
+          </a>
+          <a 
             href="https://github.com/nimitaya/quizzly-bears" 
           target="_blank"
           rel="noopener noreferrer"

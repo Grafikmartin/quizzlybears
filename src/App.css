@@ -54,7 +54,7 @@ html, body {
   font-weight: 700;
   color: var(--bg-black);
   margin-bottom: 2rem;
-  text-align: center;
+  text-align: left;
 }
 
 .project-intro-text {
@@ -438,6 +438,16 @@ html, body {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
   }
+  
+  .footer-developers {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-github-icon {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -683,6 +693,8 @@ html, body {
 
 .benefits1-left {
   flex: 1;
+  max-width: 500px;
+  min-width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -909,6 +921,7 @@ html, body {
 .benefits2-left {
   flex: 1;
   max-width: 500px;
+  min-width: 400px;
   text-align: left;
   margin-right: 15px;
 }
@@ -984,6 +997,8 @@ html, body {
 
 .benefits3-left {
   flex: 1;
+  max-width: 500px;
+  min-width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1060,6 +1075,7 @@ html, body {
 .benefits4-left {
   flex: 1;
   max-width: 500px;
+  min-width: 400px;
   text-align: left;
   margin-right: 15px;
 }
@@ -1185,6 +1201,20 @@ html, body {
   color: #212121;
   margin: 0 0 2rem 0;
   font-weight: 500;
+}
+
+.footer-developers {
+  display: inline-block;
+  color: #212121;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0 0 2rem 0;
+  transition: transform 0.3s ease;
+}
+
+.footer-developers:hover {
+  transform: scale(1.05);
 }
 
 .footer-github {
