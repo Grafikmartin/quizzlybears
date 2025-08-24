@@ -6,6 +6,10 @@ import './App.css';
 
 function App() {
   const featuresRef = useRef<HTMLDivElement>(null);
+  const benefits1Ref = useRef<HTMLDivElement>(null);
+  const benefits2Ref = useRef<HTMLDivElement>(null);
+  const benefits3Ref = useRef<HTMLDivElement>(null);
+  const benefits4Ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -38,6 +42,144 @@ function App() {
       featureItems.forEach((item) => {
         observer.observe(item);
       });
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Bidirektionale Animation für Benefits1
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // Finde die zu animierenden Elemente
+          const imageContainer = entry.target.querySelector('.benefits1-image-container');
+          const image = entry.target.querySelector('.benefits1-image-duell');
+          
+          if (imageContainer && image) {
+            if (entry.isIntersecting) {
+              // Element kommt ins Viewport - Animation vorwärts
+              (imageContainer as HTMLElement).classList.remove('animate-out');
+              (image as HTMLElement).classList.remove('animate-out');
+              (imageContainer as HTMLElement).classList.add('animate-in');
+              (image as HTMLElement).classList.add('animate-in');
+            } else {
+              // Element verlässt das Viewport - Animation rückwärts
+              (imageContainer as HTMLElement).classList.remove('animate-in');
+              (image as HTMLElement).classList.remove('animate-in');
+              (imageContainer as HTMLElement).classList.add('animate-out');
+              (image as HTMLElement).classList.add('animate-out');
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.3, // Trigger when 30% of the element is visible
+        rootMargin: '0px 0px -35% 0px' // Trigger when 35vh from bottom
+      }
+    );
+
+    if (benefits1Ref.current) {
+      observer.observe(benefits1Ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Animation für Benefits2 (von rechts)
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const imageContainer = entry.target.querySelector('.benefits2-image-container');
+          const image = entry.target.querySelector('.benefits2-image-friends');
+          
+          if (imageContainer && image) {
+            if (entry.isIntersecting) {
+              (imageContainer as HTMLElement).classList.remove('animate-out-right');
+              (image as HTMLElement).classList.remove('animate-out-right');
+              (imageContainer as HTMLElement).classList.add('animate-in-right');
+              (image as HTMLElement).classList.add('animate-in-right');
+            } else {
+              (imageContainer as HTMLElement).classList.remove('animate-in-right');
+              (image as HTMLElement).classList.remove('animate-in-right');
+              (imageContainer as HTMLElement).classList.add('animate-out-right');
+              (image as HTMLElement).classList.add('animate-out-right');
+            }
+          }
+        });
+      },
+      { threshold: 0.3, rootMargin: '0px 0px -35% 0px' }
+    );
+
+    if (benefits2Ref.current) {
+      observer.observe(benefits2Ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Animation für Benefits3 (von links)
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const imageContainer = entry.target.querySelector('.benefits3-image-container');
+          const image = entry.target.querySelector('.benefits3-image-profil');
+          
+          if (imageContainer && image) {
+            if (entry.isIntersecting) {
+              (imageContainer as HTMLElement).classList.remove('animate-out-left');
+              (image as HTMLElement).classList.remove('animate-out-left');
+              (imageContainer as HTMLElement).classList.add('animate-in-left');
+              (image as HTMLElement).classList.add('animate-in-left');
+            } else {
+              (imageContainer as HTMLElement).classList.remove('animate-in-left');
+              (image as HTMLElement).classList.remove('animate-in-left');
+              (imageContainer as HTMLElement).classList.add('animate-out-left');
+              (image as HTMLElement).classList.add('animate-out-left');
+            }
+          }
+        });
+      },
+      { threshold: 0.3, rootMargin: '0px 0px -35% 0px' }
+    );
+
+    if (benefits3Ref.current) {
+      observer.observe(benefits3Ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Animation für Benefits4 (von rechts)
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const imageContainer = entry.target.querySelector('.benefits4-image-container');
+          const image = entry.target.querySelector('.benefits4-image-stats');
+          
+          if (imageContainer && image) {
+            if (entry.isIntersecting) {
+              (imageContainer as HTMLElement).classList.remove('animate-out-right');
+              (image as HTMLElement).classList.remove('animate-out-right');
+              (imageContainer as HTMLElement).classList.add('animate-in-right');
+              (image as HTMLElement).classList.add('animate-in-right');
+            } else {
+              (imageContainer as HTMLElement).classList.remove('animate-in-right');
+              (image as HTMLElement).classList.remove('animate-in-right');
+              (imageContainer as HTMLElement).classList.add('animate-out-right');
+              (image as HTMLElement).classList.add('animate-out-right');
+            }
+          }
+        });
+      },
+      { threshold: 0.3, rootMargin: '0px 0px -35% 0px' }
+    );
+
+    if (benefits4Ref.current) {
+      observer.observe(benefits4Ref.current);
     }
 
     return () => observer.disconnect();
@@ -129,7 +271,7 @@ function App() {
         </section>
 
         {/* Benefits1 Section */}
-        <div className="benefits1-section" id="benefits">
+        <div className="benefits1-section" id="benefits" ref={benefits1Ref}>
           <div className="benefits1-content">
             <h2 className="benefits1-title">Benefits Quizzly Bears</h2>
             
@@ -157,7 +299,7 @@ function App() {
         </div>
 
         {/* Benefits2 Section */}
-        <div className="benefits2-section">
+        <div className="benefits2-section" ref={benefits2Ref}>
           <div className="benefits2-content">
             <div className="benefits2-layout">
               <div className="benefits2-left">
@@ -183,7 +325,7 @@ function App() {
         </div>
 
         {/* Benefits3 Section */}
-        <div className="benefits3-section">
+        <div className="benefits3-section" ref={benefits3Ref}>
           <div className="benefits3-content">
             <div className="benefits3-layout">
               <div className="benefits3-left">
@@ -209,7 +351,7 @@ function App() {
         </div>
 
         {/* Benefits4 Section */}
-        <div className="benefits4-section">
+        <div className="benefits4-section" ref={benefits4Ref}>
           <div className="benefits4-content">
             <div className="benefits4-layout">
               <div className="benefits4-left">

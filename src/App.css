@@ -556,6 +556,7 @@
   overflow: visible;
   position: relative;
   margin-right: 15px;
+  transform: translateX(-500px) translateY(80px) scale(0.7);
 }
 
 .benefits1-image-duell {
@@ -566,6 +567,159 @@
   top: 10%;
   left: 0%;
   z-index: 2;
+  transform: translateX(-500px) translateY(80px) scale(0.7);
+}
+
+/* Bidirektionale Animation */
+.animate-in {
+  animation: slideInFromLeft 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-out {
+  animation: slideOutToLeft 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-500px) translateY(80px) scale(0.7);
+  }
+  80% {
+    transform: translateX(0px) translateY(0px) scale(1.0);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px) scale(1.0);
+  }
+}
+
+@keyframes slideOutToLeft {
+  0% {
+    transform: translateX(0px) translateY(0px) scale(1.0);
+  }
+  20% {
+    transform: translateX(0px) translateY(0px) scale(1.0);
+  }
+  100% {
+    transform: translateX(-500px) translateY(80px) scale(0.7);
+  }
+}
+
+/* Benefits2 Section - Animation von rechts */
+.benefits2-image-container {
+  width: 400px;
+  height: 400px;
+  background-color: #cdf546;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  position: relative;
+  transform: translateX(500px) translateY(80px) scale(0.7);
+}
+
+.benefits2-image-friends {
+  width: 120%;
+  height: 120%;
+  object-fit: contain;
+  position: absolute;
+  top: 10%;
+  left: -20%;
+  z-index: 2;
+  transform: translateX(500px) translateY(80px) scale(0.7);
+}
+
+/* Benefits3 Section - Animation von links */
+.benefits3-image-container {
+  width: 400px;
+  height: 400px;
+  background-color: #cdf546;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  position: relative;
+  margin-right: 15px;
+  transform: translateX(-500px) translateY(80px) scale(0.7);
+}
+
+.benefits3-image-profil {
+  width: 120%;
+  height: 120%;
+  object-fit: contain;
+  position: absolute;
+  top: -10%;
+  left: 0%;
+  z-index: 2;
+  transform: translateX(-500px) translateY(80px) scale(0.7);
+}
+
+/* Benefits4 Section - Animation von rechts */
+.benefits4-image-container {
+  width: 400px;
+  height: 400px;
+  background-color: #cdf546;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  position: relative;
+  transform: translateX(500px) translateY(80px) scale(0.7);
+}
+
+.benefits4-image-stats {
+  width: 180%;
+  height: 180%;
+  object-fit: contain;
+  position: absolute;
+  top: 10%;
+  left: -50%;
+  z-index: 2;
+  transform: translateX(500px) translateY(80px) scale(0.7);
+}
+
+/* Animation Klassen für von links kommende Elemente */
+.animate-in-left {
+  animation: slideInFromLeft 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-out-left {
+  animation: slideOutToLeft 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Animation Klassen für von rechts kommende Elemente */
+.animate-in-right {
+  animation: slideInFromRight 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-out-right {
+  animation: slideOutToRight 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Keyframes für von rechts kommende Animationen */
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(500px) translateY(80px) scale(0.7);
+  }
+  80% {
+    transform: translateX(0px) translateY(0px) scale(1.0);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px) scale(1.0);
+  }
+}
+
+@keyframes slideOutToRight {
+  0% {
+    transform: translateX(0px) translateY(0px) scale(1.0);
+  }
+  20% {
+    transform: translateX(0px) translateY(0px) scale(1.0);
+  }
+  100% {
+    transform: translateX(500px) translateY(80px) scale(0.7);
+  }
 }
 
 .benefits1-right {
@@ -626,6 +780,7 @@
   justify-content: center;
   overflow: visible;
   position: relative;
+  transform: translateX(500px) translateY(80px) scale(0.7);
 }
 
 .benefits2-image-friends {
@@ -636,6 +791,7 @@
   top: 10%;
   left: -20%;
   z-index: 2;
+  transform: translateX(500px) translateY(80px) scale(0.7);
 }
 
 .benefits2-image {
@@ -701,6 +857,7 @@
   overflow: visible;
   position: relative;
   margin-right: 15px;
+  transform: translateX(-500px) translateY(80px) scale(0.7);
 }
 
 .benefits3-image-profil {
@@ -711,6 +868,7 @@
   top: 10%;
   left: 0%;
   z-index: 2;
+  transform: translateX(-500px) translateY(80px) scale(0.7);
 }
 
 .benefits3-right {
@@ -773,6 +931,7 @@
   justify-content: center;
   overflow: visible;
   position: relative;
+  transform: translateX(500px) translateY(80px) scale(0.7);
 }
 
 .benefits4-image-profil {
@@ -793,6 +952,7 @@
   top: 10%;
   left: -50%;
   z-index: 2;
+  transform: translateX(500px) translateY(80px) scale(0.7);
 }
 
 .benefits4-subtitle {
@@ -1008,6 +1168,19 @@
   .benefits3-content,
   .benefits4-content {
     padding: 0 7vw;
+  }
+}
+
+/* Sehr breite Bildschirme - Extra Anpassung für Benefits3 */
+@media (min-width: 1400px) {
+  .benefits3-image-profil {
+    top: -15%;
+  }
+}
+
+@media (min-width: 1800px) {
+  .benefits3-image-profil {
+    top: -20%;
   }
 }
 
