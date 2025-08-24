@@ -37,6 +37,59 @@ html, body {
   max-width: 100%;
 }
 
+/* Project Introduction Section */
+.project-intro-section {
+  padding: 4rem 0;
+  background-color: white;
+}
+
+.project-intro-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 10vw;
+}
+
+.project-intro-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--bg-black);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.project-intro-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--bg-black);
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.tech-stack-highlight {
+  background-color: var(--bg-gray);
+  padding: 2rem;
+  border-radius: 16px;
+  border-left: 4px solid var(--bg-limo);
+}
+
+.tech-stack-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--bg-black);
+  margin-bottom: 1.5rem;
+}
+
+.tech-stack-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--bg-black);
+}
+
+.tech-stack-text strong {
+  color: var(--bg-black);
+  font-weight: 600;
+}
+
 .hero-content {
   max-width: 1400px;
   margin: 0 auto;
@@ -116,6 +169,14 @@ html, body {
     height: 45vh;
   }
   
+  .project-intro-content {
+    padding: 0 10vw;
+  }
+  
+  .project-intro-title {
+    font-size: 2.2rem;
+  }
+  
   .features-content {
     padding: 0 10vw 0 10vw;
   }
@@ -176,6 +237,30 @@ html, body {
     padding: 4rem 0;
   }
   
+  .project-intro-content {
+    padding: 0 5vw;
+    text-align: center;
+  }
+  
+  .project-intro-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .project-intro-text {
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .tech-stack-highlight {
+    padding: 1.5rem;
+  }
+  
+  .tech-stack-title {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  
   /* Features besser zentrieren auf kleinen Bildschirmen */
   .features-content {
     text-align: center;
@@ -185,6 +270,7 @@ html, body {
     grid-template-columns: 1fr;
     max-width: 400px;
     margin: 0 auto;
+    justify-items: center;
   }
   
   .feature-item {
@@ -372,6 +458,33 @@ html, body {
     height: 35vh;
   }
   
+  .project-intro-content {
+    padding: 0 3vw;
+  }
+  
+  .project-intro-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .project-intro-text {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+  
+  .tech-stack-highlight {
+    padding: 1rem;
+  }
+  
+  .tech-stack-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tech-stack-text {
+    font-size: 0.9rem;
+  }
+  
   .features-content {
     padding: 0 3vw 0 3vw;
   }
@@ -384,6 +497,7 @@ html, body {
   .features-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+    justify-items: center;
   }
   
   .feature-item {
@@ -499,7 +613,7 @@ html, body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  justify-items: center;
+  justify-items: start;
 }
 
 .feature-item {
