@@ -191,8 +191,8 @@ function App() {
       <header className="header">
         <div className="header-container">
           <div className="logo-section">
-            <img src="/assets/images/Logo-Bear-green-black.webp" alt="Quizzly Bears Logo" className="logo-bear" />
-            <img src="/assets/images/Logo-Text.webp" alt="Quizzly Bears Text" className="logo-text" />
+                    <img src="./assets/images/Logo-Bear-green-black.webp" alt="Quizzly Bears Logo" className="logo-bear" />
+        <img src="./assets/images/Logo-Text.webp" alt="Quizzly Bears Text" className="logo-text" />
           </div>
           <nav className="nav-links">
             <a href="#features">Features</a>
@@ -217,7 +217,7 @@ function App() {
             </div>
             <div className="hero-right">
               <img 
-                src="/assets/images/play-start-solo.webp" 
+                src="./assets/images/play-start-solo.webp" 
                 alt="Play Start Solo" 
                 className="hero-image" 
               />
@@ -279,7 +279,7 @@ function App() {
               <div className="benefits1-left">
                 <div className="benefits1-image-container">
                   <img 
-                    src="/assets/images/Play-Duell-Question-Block-Aktiv-F.webp" 
+                    src="./assets/images/Play-Duell-Question-Block-Aktiv-F.webp" 
                     alt="Play Duell Question Block" 
                     className="benefits1-image benefits1-image-duell"
                   />
@@ -314,7 +314,7 @@ function App() {
               <div className="benefits2-right">
                 <div className="benefits2-image-container">
                   <img 
-                    src="/assets/images/Profil-Friends.webp" 
+                    src="./assets/images/Profil-Friends.webp" 
                     alt="Profil Friends" 
                     className="benefits2-image benefits2-image-friends"
                   />
@@ -331,7 +331,7 @@ function App() {
               <div className="benefits3-left">
                 <div className="benefits3-image-container">
                   <img 
-                    src="/assets/images/Profil-Tab.webp" 
+                    src="./assets/images/Profil-Tab.webp" 
                     alt="Profil Tab" 
                     className="benefits3-image-profil"
                   />
@@ -366,7 +366,7 @@ function App() {
               <div className="benefits4-right">
                 <div className="benefits4-image-container">
                   <img 
-                    src="/assets/images/Statistics-Tab.webp" 
+                    src="./assets/images/Statistics-Tab.webp" 
                     alt="Statistics Tab" 
                     className="benefits4-image-stats"
                   />
@@ -383,12 +383,12 @@ function App() {
           <h2 className="download-title">Download app Quizzly Bears</h2>
           <div className="download-buttons">
             <img 
-              src="/assets/images/apple-store.webp" 
+              src="./assets/images/apple-store.webp" 
               alt="Download on Apple App Store" 
               className="download-button"
             />
             <img 
-              src="/assets/images/google-play.webp" 
+              src="./assets/images/google-play.webp" 
               alt="Download on Google Play Store" 
               className="download-button"
             />
@@ -401,7 +401,7 @@ function App() {
         <div className="footer-line"></div>
         <div className="footer-content">
           <img 
-            src="/assets/images/Logo-Bear-black.webp" 
+            src="./assets/images/Logo-Bear-black.webp" 
             alt="Quizzly Bears Logo" 
             className="footer-logo"
           />
@@ -413,7 +413,7 @@ function App() {
             className="footer-github"
           >
             <img 
-              src="/assets/images/github.webp" 
+              src="./assets/images/github.webp" 
               alt="GitHub Repository" 
               className="footer-github-icon"
             />
