@@ -176,6 +176,22 @@ html, body {
     padding: 4rem 0;
   }
   
+  /* Features besser zentrieren auf kleinen Bildschirmen */
+  .features-content {
+    text-align: center;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .feature-item {
+    width: 100%;
+    max-width: 350px;
+  }
+  
   .hero-content {
     flex-direction: column;
     padding: 0 5vw 0 5vw;
@@ -483,6 +499,7 @@ html, body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  justify-items: center;
 }
 
 .feature-item {
