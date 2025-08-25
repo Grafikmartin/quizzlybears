@@ -292,8 +292,8 @@ function App() {
               <div className="benefits1-left">
                 <div className="benefits1-image-container">
                   <img 
-                    src="/quizzlybears/assets/images/Play-Duell-Question-Block-Aktiv-F.webp" 
-                    alt="Play Duell Question Block" 
+                    src="/quizzlybears/assets/images/benefitsYourTopic.webp" 
+                    alt="Your Topic Benefits" 
                     className="benefits1-image benefits1-image-duell"
                   />
                 </div>
@@ -326,8 +326,8 @@ function App() {
               <div className="benefits2-right">
                 <div className="benefits2-image-container">
                   <img 
-                    src="/quizzlybears/assets/images/Profil-Friends.webp" 
-                    alt="Profil Friends" 
+                    src="/quizzlybears/assets/images/benefitsGame.webp" 
+                    alt="Game Benefits" 
                     className="benefits2-image benefits2-image-friends"
                   />
                 </div>
@@ -343,8 +343,8 @@ function App() {
               <div className="benefits3-left">
                 <div className="benefits3-image-container">
                   <img 
-                    src="/quizzlybears/assets/images/Profil-Tab.webp" 
-                    alt="Profil Tab" 
+                    src="/quizzlybears/assets/images/benefitsStatistics.webp" 
+                    alt="Statistics Benefits" 
                     className="benefits3-image-profil"
                   />
                 </div>
@@ -376,8 +376,8 @@ function App() {
               <div className="benefits4-right">
                 <div className="benefits4-image-container">
                   <img 
-                    src="/quizzlybears/assets/images/Statistics-Tab.webp" 
-                    alt="Statistics Tab" 
+                    src="/quizzlybears/assets/images/benefitsMinigames.webp" 
+                    alt="Minigames Benefits" 
                     className="benefits4-image-stats"
                   />
                 </div>
