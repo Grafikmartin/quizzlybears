@@ -403,7 +403,7 @@ We’ve combined smooth gameplay with a modern design to make quizzing more fun 
             <div className="download-button-container">
               <div className="coming-soon-badge">Coming Soon</div>
               <img 
-                src="/quizzlybears/assets/images/handy-roh.webp" 
+                src="/quizzlybears/assets/images/google-play.webp" 
                 alt="Download on Google Play Store" 
                 className="download-button"
               />
@@ -417,15 +417,23 @@ We’ve combined smooth gameplay with a modern design to make quizzing more fun 
         <div className="footer-line"></div>
         <div className="footer-content">
           <img 
-            src="/quizzlybears/assets/images/Logo-Bear-black.webp" 
+            src="/quizzlybears/assets/images/Logo-Bear-green-black.webp" 
             alt="Quizzly Bears Logo" 
             className="footer-logo"
           />
-          <p className="footer-copyright">© 2025 Quizzly Bears. All rights reserved</p>
+          <p className="footer-copyright">
+            © 2024 Quizzly Bears. All rights reserved.
+          </p>
+          <p className="footer-developers">
+            Developers Quizzly Bears: Maryna Rozhkova, Sonja Schweren, Natallia Karatava, Vadim Zbanok, Martin Borth
+          </p>
+          <p className="footer-operation">
+            This website is operated by Martin Borth and Natallia Karatava
+          </p>
           <a 
             href="https://github.com/nimitaya/quizzly-bears" 
-          target="_blank"
-          rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
             className="footer-github"
           >
             <img 
@@ -434,43 +442,10 @@ We’ve combined smooth gameplay with a modern design to make quizzing more fun 
               className="footer-github-icon"
             />
           </a>
-          <a 
-            href="#developers" 
-            className="footer-developers"
-          >
-            Developers
-          </a>
         </div>
       </footer>
-        
-        {/* Developers Section */}
-        <section id="developers" className="developers-section">
-          <div className="developers-content">
-            <h2 className="developers-title">Development Team</h2>
-            <div className="developers-list">
-              <div className="developer-item">
-                <h3 className="developer-name">Maryna Rozhkova</h3>
-              </div>
-              <div className="developer-item">
-                <h3 className="developer-name">Sonja Schweren</h3>
-              </div>
-              <div className="developer-item">
-                <h3 className="developer-name">Natallia Karatava</h3>
-              </div>
-              <div className="developer-item">
-                <h3 className="developer-name">Vadim Zbanok</h3>
-              </div>
-              <div className="developer-item">
-                <h3 className="developer-name">Martin Borth</h3>
-              </div>
-            </div>
-            <p className="developers-note">
-              This website was developed by Martin Borth as part of the Quizzly Bears project.
-            </p>
-          </div>
-        </section>
-      </div>
-    );
+    </div>
+  );
 }
 
 export default App;
