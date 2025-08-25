@@ -276,6 +276,7 @@ html, body {
   .feature-item {
     width: 100%;
     max-width: 350px;
+    min-height: 180px;
   }
   
   .hero-content {
@@ -635,9 +636,9 @@ html, body {
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
-  justify-items: start;
+  justify-items: stretch;
 }
 
 .feature-item {
@@ -648,6 +649,12 @@ html, body {
   transition: transform 0.3s ease;
   opacity: 0;
   transform: translateY(30px);
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .feature-item.visible {

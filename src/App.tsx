@@ -213,7 +213,7 @@ function App() {
                 Quizzly&nbsp;Bears&nbsp;–<br />
                 the quiz app with AI
               </h1>
-              <button className="hero-button">Download</button>
+              <a href="#download" className="hero-button">Download</a>
             </div>
             <div className="hero-right">
               <img 
