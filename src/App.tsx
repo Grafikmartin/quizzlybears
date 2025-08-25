@@ -423,12 +423,6 @@ We’ve combined smooth gameplay with a modern design to make quizzing more fun 
           />
           <p className="footer-copyright">© 2025 Quizzly Bears. All rights reserved</p>
           <a 
-            href="#developers" 
-            className="footer-developers"
-          >
-            Developers
-          </a>
-          <a 
             href="https://github.com/nimitaya/quizzly-bears" 
           target="_blank"
           rel="noopener noreferrer"
@@ -440,10 +434,43 @@ We’ve combined smooth gameplay with a modern design to make quizzing more fun 
               className="footer-github-icon"
             />
           </a>
+          <a 
+            href="#developers" 
+            className="footer-developers"
+          >
+            Developers
+          </a>
         </div>
       </footer>
-    </div>
-  );
+        
+        {/* Developers Section */}
+        <section id="developers" className="developers-section">
+          <div className="developers-content">
+            <h2 className="developers-title">Development Team</h2>
+            <div className="developers-list">
+              <div className="developer-item">
+                <h3 className="developer-name">Maryna Rozhkova</h3>
+              </div>
+              <div className="developer-item">
+                <h3 className="developer-name">Sonja Schweren</h3>
+              </div>
+              <div className="developer-item">
+                <h3 className="developer-name">Natallia Karatava</h3>
+              </div>
+              <div className="developer-item">
+                <h3 className="developer-name">Vadim Zbanok</h3>
+              </div>
+              <div className="developer-item">
+                <h3 className="developer-name">Martin Borth</h3>
+              </div>
+            </div>
+            <p className="developers-note">
+              This website was developed by Martin Borth as part of the Quizzly Bears project.
+            </p>
+          </div>
+        </section>
+      </div>
+    );
 }
 
 export default App;
