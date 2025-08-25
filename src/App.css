@@ -1135,7 +1135,7 @@ html, body {
   padding: 6rem 0;
   background-color: #cdf546;
   position: relative;
-  z-index: 2;
+  z-index: 10;
   margin-top: 10rem;
 }
 
@@ -1166,6 +1166,7 @@ html, body {
   object-fit: contain;
   transition: transform 0.3s ease;
   position: relative;
+  cursor: pointer;
 }
 
 .download-button:hover {
@@ -1175,35 +1176,37 @@ html, body {
 .download-button:hover::after {
   content: attr(data-tooltip);
   position: absolute;
-  top: -40px;
+  top: -50px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.8);
+  background: #333;
   color: white;
-  padding: 8px 12px;
-  border-radius: 6px;
-  font-size: 0.8rem;
-  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
   white-space: nowrap;
-  z-index: 1000;
+  z-index: 9999;
   animation: fadeIn 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 2px solid #fff;
 }
 
 .download-button:hover::before {
   content: '';
   position: absolute;
-  top: -8px;
+  top: -10px;
   left: 50%;
   transform: translateX(-50%);
-  border: 6px solid transparent;
-  border-top-color: rgba(0, 0, 0, 0.8);
-  z-index: 1000;
+  border: 8px solid transparent;
+  border-top-color: #333;
+  z-index: 9999;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateX(-50%) translateY(5px);
+    transform: translateX(-50%) translateY(10px);
   }
   to {
     opacity: 1;
