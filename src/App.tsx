@@ -300,11 +300,10 @@ function App() {
               </div>
               
               <div className="benefits1-right">
-                <h3 className="benefits1-subtitle">Great Selection</h3>
+                <h3 className="benefits1-subtitle">Your Topic, Your Quiz</h3>
                 <p className="benefits1-text">
-                  Enter any topic and our AI will generate a personalized quiz just for you. 
-                  Dynamic question generation ensures fresh content every time. 
-                  Questions tailored to provide the right level of challenge.
+                Pick any topic – and Qizzly Bears’ AI instantly creates your very own personalized quiz.
+                No boredom: every round brings fresh, dynamic questions with just the right level of challenge.
                 </p>
               </div>
             </div>
@@ -316,10 +315,11 @@ function App() {
           <div className="benefits2-content">
             <div className="benefits2-layout">
               <div className="benefits2-left">
-                <h3 className="benefits2-subtitle">Smart Adaptation</h3>
+                <h3 className="benefits2-subtitle">Smart Adaption – Maximum Flow</h3>
                 <p className="benefits2-text">
-                  Our AI analyzes your answers and automatically adjusts the difficulty level. 
-                  From "Cub Curious" (Easy) to "Grizzly Guru" (Hard) - find your perfect level.
+                Our AI learns from your answers and automatically adjusts the difficulty.
+From “Cub Curious” (easy) to “Grizzly Guru” (hard) – find your perfect level.
+We’ve combined smooth gameplay with a modern design to make quizzing more fun than ever before. 
                 </p>
               </div>
               
@@ -351,10 +351,10 @@ function App() {
               </div>
               
               <div className="benefits3-right">
-                <h3 className="benefits3-subtitle">Gamification & Rewards</h3>
+                <h3 className="benefits3-subtitle">Points, Medals & Glory</h3>
                 <p className="benefits3-text">
-                  Collect points, earn bronze, silver and gold medals and track your progress. 
-                  Compare yourself with friends on leaderboards and become the ultimate quiz master.
+                Collect points, earn bronze, silver and gold medals, and track your progress as you level up.
+                Challenge your friends on the leaderboards and claim the crown as the ultimate Quizzly Bears Master.
                 </p>
               </div>
             </div>
@@ -403,7 +403,7 @@ function App() {
             <div className="download-button-container">
               <div className="coming-soon-badge">Coming Soon</div>
               <img 
-                src="/quizzlybears/assets/images/google-play.webp" 
+                src="/quizzlybears/assets/images/handy-roh.webp" 
                 alt="Download on Google Play Store" 
                 className="download-button"
               />
