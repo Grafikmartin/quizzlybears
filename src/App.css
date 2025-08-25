@@ -824,12 +824,12 @@ html, body {
 }
 
 .benefits4-image-stats {
-  width: 180%;
-  height: 180%;
+  width: 120%;
+  height: 120%;
   object-fit: contain;
   position: absolute;
   top: 10%;
-  left: -50%;
+  left: -20%;
   z-index: 2;
   transform: translateX(500px) translateY(80px) scale(0.7);
 }
@@ -1104,12 +1104,12 @@ html, body {
 }
 
 .benefits4-image-stats {
-  width: 180%;
-  height: 180%;
+  width: 120%;
+  height: 120%;
   object-fit: contain;
   position: absolute;
-  top: -10%;
-  left: -50%;
+  top: 10%;
+  left: -20%;
   z-index: 2;
   transform: translateX(500px) translateY(80px) scale(0.7);
 }
@@ -1165,10 +1165,50 @@ html, body {
   width: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
+  position: relative;
 }
 
 .download-button:hover {
   transform: scale(1.05);
+}
+
+.download-button:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.download-button:hover::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 /* Footer */
