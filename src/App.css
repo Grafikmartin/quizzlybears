@@ -425,6 +425,13 @@ html, body {
     height: 70px;
   }
   
+  .coming-soon-badge {
+    font-size: 0.6rem;
+    padding: 5px 8px;
+    top: -6px;
+    right: -6px;
+  }
+  
   .footer-content {
     padding: 3rem 5vw 3rem 5vw;
   }
@@ -577,6 +584,13 @@ html, body {
   
   .download-button {
     height: 60px;
+  }
+  
+  .coming-soon-badge {
+    font-size: 0.55rem;
+    padding: 4px 6px;
+    top: -5px;
+    right: -5px;
   }
   
   .footer-content {
@@ -1165,53 +1179,44 @@ html, body {
   width: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
+}
+
+.download-button-container {
   position: relative;
-  cursor: pointer;
+  display: inline-block;
+}
+
+.coming-soon-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--system-orange, #ff6b35);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(255, 107, 53, 0.4);
+  z-index: 10;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  border: 2px solid white;
+  animation: badgePulse 2s infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 3px 10px rgba(255, 107, 53, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.6);
+  }
 }
 
 .download-button:hover {
   transform: scale(1.05);
-}
-
-.download-button:hover::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  top: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #333;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  white-space: nowrap;
-  z-index: 9999;
-  animation: fadeIn 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  border: 2px solid #fff;
-}
-
-.download-button:hover::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 8px solid transparent;
-  border-top-color: #333;
-  z-index: 9999;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateX(-50%) translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
 }
 
 /* Footer */

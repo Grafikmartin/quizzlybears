@@ -392,18 +392,22 @@ function App() {
         <div className="download-content">
           <h2 className="download-title">Download app Quizzly Bears</h2>
           <div className="download-buttons">
-            <img 
-              src="/quizzlybears/assets/images/apple-store.webp" 
-              alt="Download on Apple App Store" 
-              className="download-button"
-              data-tooltip="Coming Soon"
-            />
-            <img 
-              src="/quizzlybears/assets/images/google-play.webp" 
-              alt="Download on Google Play Store" 
-              className="download-button"
-              data-tooltip="Coming Soon"
-            />
+            <div className="download-button-container">
+              <div className="coming-soon-badge">Coming Soon</div>
+              <img 
+                src="/quizzlybears/assets/images/apple-store.webp" 
+                alt="Download on Apple App Store" 
+                className="download-button"
+              />
+            </div>
+            <div className="download-button-container">
+              <div className="coming-soon-badge">Coming Soon</div>
+              <img 
+                src="/quizzlybears/assets/images/google-play.webp" 
+                alt="Download on Google Play Store" 
+                className="download-button"
+              />
+            </div>
           </div>
         </div>
       </section>
