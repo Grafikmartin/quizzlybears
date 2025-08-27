@@ -387,8 +387,31 @@ We’ve combined smooth gameplay with a modern design to make quizzing more fun 
         </div>
       </main>
 
+  {/* Black line above the download section */}
+  <div className="download-line"></div>
+  
   {/* Download Section */}
   <section className="download-section" id="download">
+        {/* Video Background */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            zIndex: -1
+          }}
+        >
+          <source src="/quizzlybears/assets/videos/QB.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        
         <div className="download-content">
           <h2 className="download-title">Download app Quizzly Bears</h2>
           <div className="download-buttons">
