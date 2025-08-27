@@ -253,7 +253,7 @@ function App() {
                 <div className="feature-icon">
                   <span className="material-icons">tune</span>
                 </div>
-                <p className="feature-text">Customize the difficulty to your liking</p>
+                <p className="feature-text">Customize the difficulty</p>
               </div>
               <div className="feature-item">
                 <div className="feature-icon">
@@ -448,7 +448,7 @@ We’ve combined smooth gameplay with a modern design to make quizzing more fun 
             © 2024 Quizzly Bears. All rights reserved.
           </p>
           <p className="footer-developers">
-            Developers Quizzly Bears: Maryna Rozhkova, Sonja Schweren, Natallia Karatava, Vadim Zbanok, Martin Borth
+            Developers Quizzly Bears: Natallia Karatava, Sonja Schweren, Maryna Rozhkova, Vadim Zbanok, Martin Borth
           </p>
           <p className="footer-operation">
             This website is operated by Martin Borth and Natallia Karatava
